@@ -1,0 +1,28 @@
+{%
+  set classes = [
+  'socialhub',
+  ]
+%}
+<div class="container">
+  <div class="row">
+    <div class="button-group filters-button-group">
+      <button data-group="*">Show all</button>
+      {% for key,value in content.tabs %}
+        {% if value %}
+          <button data-group=".{{ key }}">{{ key|capitalize }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div> 
+    
+  <div class="row grid" id="social_hub_content">
+    {{content.data}}
+      <div class="col-md-4 col-sm-6 col-xs-12 shuffle_sizer grid-item"></div>
+  </div>
+    
+  <div class="row" id="social_hub_pager">
+    {{content.pager}}
+  </div>
+    <div style="text-align: center; clear:both">
+      <button id="social_hub_loadmore" class="btn btn-primary">Load more</button></div>
+</div>

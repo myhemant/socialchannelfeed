@@ -1,0 +1,37 @@
+youtube:
+  version: 1.x
+  css:
+    theme:
+      css/youtube.css: {}
+  js:
+    js/youtube.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once 
+masonry:
+  version: 1.x
+  css:
+    theme:
+      css/masonry.css: {}
+  js:
+    js/masonry.pkgd.min.js: {}
+  dependencies:
+    - core/jquery
+isotope:
+  version: 1.x
+  js:
+    js/isotope.pkgd.min.js: {}
+  dependencies:
+    - core/jquery
+socialhub:
+  version: 1.x
+  js:
+    js/socialhub.js: {}
+    js/jquery.autopager-1.0.0.js: {}
+  dependencies:
+    - core/jquery
+    - socialmediafeed/masonry
+    - socialmediafeed/isotope

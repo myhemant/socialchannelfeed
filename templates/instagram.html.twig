@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a facebook post.
+ *
+ * Available variables:
+ * - instagram
+ *   - instagram_user
+ *   - instagram_link
+ *   - created_time
+ *   - caption
+ *   - low_resolution
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'socialhub',
+  'instagram',
+  ]
+%}
+
+<div class="col-md-4 grid-item element-item instagram">
+  <div class="inner">
+  <div class="date">{{ instagram.created_time }}</div>
+  <a class="instagram-username" href="https://www.instagram.com/{{instagram.instagram_user}}"><span>@
+    </span>{{ instagram.instagram_user}}</a>
+  <div class="instgram-caption">{{ instagram.caption|raw }}</div>
+  <div class="instagram-pic">{{ instagram.low_resolution }}</div>
+  <a class="instagram-link" target="_blank" href="{{instagram.instagram_link}}">
+    View source</a>
+  </div>
+</div>
+ 

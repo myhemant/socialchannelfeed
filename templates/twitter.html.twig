@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+set classes = [
+'socialhub',
+'twitter',
+]
+%}
+
+<div class="col-md-4 grid-item element-item twitter">
+  <div class="inner">
+  <div class="date">{{ twitter.twitter_date }}</div>
+  <a class="tw-username" href="{{twitter.full_username}}"><span>@
+    </span>{{ twitter.username}}</a>
+  <div class="tw-tweet">{{ twitter.tweet|raw }}</div>
+  </div>
+</div>
+ 

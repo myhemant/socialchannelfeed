@@ -1,0 +1,55 @@
+socialmediafeed.getfeed:
+  path: '/social-media-feed'
+  defaults: { _controller: '\Drupal\socialmediafeed\Controller\SocialMediaFeedController::posts' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+socialmediafeed.admin_index:
+  path: '/admin/config/social-media-feed'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Social Media Feed'
+  requirements:
+    _permission: 'administer site configuration'
+socialmediafeed.form:
+  path: '/admin/config/social-media-feed/config'
+  defaults:
+    _form: '\Drupal\socialmediafeed\Form\SocialMediaFeedForm'
+    _title: 'Social Media Feed config form'
+  requirements:
+    _permission: 'administer site configuration'
+socialmediafeed.facebook:
+  path: '/admin/config/social-media-feed/config/facebook'
+  defaults:
+    _form: '\Drupal\socialmediafeed\Form\SocialMediaFeedFacebook'
+    _title: 'Social Media Facebook Feed config form'
+  requirements:
+    _permission: 'administer site configuration'
+socialmediafeed.twitter:
+  path: '/admin/config/social-media-feed/config/twitter'
+  defaults:
+    _form: '\Drupal\socialmediafeed\Form\SocialMediaFeedTwitter'
+    _title: 'Social Media Twitter Feed config form'
+  requirements:
+    _permission: 'administer site configuration'    
+socialmediafeed.instagram:
+  path: '/admin/config/social-media-feed/config/instagram'
+  defaults:
+    _form: '\Drupal\socialmediafeed\Form\SocialMediaFeedInstagram'
+    _title: 'Social Media Instagram Feed config form'
+  requirements:
+    _permission: 'administer site configuration'
+socialmediafeed.linkedin:
+  path: '/admin/config/social-media-feed/config/linkedin'
+  defaults:
+    _form: '\Drupal\socialmediafeed\Form\SocialMediaFeedLinkedin'
+    _title: 'Social Media LinkedIn Feed config form'
+  requirements:
+    _permission: 'administer site configuration'
+socialmediafeed.youtube:
+  path: '/admin/config/social-media-feed/config/youtube'
+  defaults:
+    _form: '\Drupal\socialmediafeed\Form\SocialMediaFeedYoutube'
+    _title: 'Social Media YouTube Feed config form'
+  requirements:
+    _permission: 'administer site configuration'    

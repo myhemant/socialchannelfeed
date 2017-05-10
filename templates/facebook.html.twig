@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a facebook post.
+ *
+ * Available variables:
+ * - facebook
+ *   - full_picture
+ *   - video
+ *   - created_stamp
+ *   - message
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+set classes = [
+'socialhub',
+'facebook',
+]
+%}
+
+  <div class="col-md-4 grid-item element-item facebook">
+    <div class="inner">
+    <!-- Time -->
+    {% if facebook.created_stamp %}
+    <div class="fb-time">
+        {{ facebook.created_stamp }}
+    </div>
+  {% endif %}
+    <!-- Picture -->
+  {% if facebook.full_picture %}
+    <div class="fb-pic">
+      {{facebook.full_picture}}
+    </div>
+  {% endif %}
+  <!-- Video -->
+    {% if facebook.video %}
+    <div class="fb-video facebook-responsive">
+      {{facebook.video|raw }}
+    </div>
+    {% endif %}
+      <!-- Feed -->
+    {% if(facebook.message) %}
+    <div class="fb-message">
+        {{ facebook.message|raw }}
+    </div>
+    {% endif %}
+  <!-- Full post link -->
+    {% if facebook.full_feed_link %}
+    <div class="teaser-link">
+        {{facebook.full_feed_link}}
+    </div>
+  {% endif %}
+  </div>
+      </div>

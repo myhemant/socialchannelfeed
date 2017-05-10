@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Provide Facebook, Twitter and Instagram.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function socialmediafeed_help($path, $arg) {
+    switch ($path) {
+        case 'admin/help#socialmediafeed':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('The Social media feed module allows you to fetch feeds 
+        directly from Facebook, Twitter, Instagram, YouTube, LinkedIn
+        by simply insatlling it.</p>');
+            return $output;
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function socialmediafeed_theme() {
+    return array(
+        'socialhub_facebook' => array(
+            'render_element' => 'element',
+            'variables' => array('facebook' => null),
+            'template' => 'facebook',
+        ),
+        'socialhub_twitter' => array(
+            'render_element' => 'element',
+            'variables' => array('twitter' => null),
+            'template' => 'twitter',
+        ),
+        'socialhub_instagram' => array(
+            'render_element' => 'element',
+            'variables' => array('instagram' => null),
+            'template' => 'instagram',
+        ),
+        'socialhub_linkedin' => array(
+            'render_element' => 'element',
+            'variables' => array('linkedin' => null),
+            'template' => 'linkedin',
+        ),
+        'socialhub_youtube' => array(
+            'render_element' => 'element',
+            'variables' => array('youtube' => null),
+            'template' => 'youtube',
+        ),
+        'socialhub_page' => array(
+            'template' => 'page_socialhub',
+            'render_element' => 'element',
+            'variables' => array('content' => null),
+        ),
+    );
+}

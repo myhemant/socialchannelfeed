@@ -1,0 +1,44 @@
+/* 
+    Document   : youtube
+    Created on : Mar 29, 2017, 4:31:40 PM
+    Author     : Govind Malu
+    Description:
+        Youtube player styles.
+*/
+
+  /* ---- grid ---- */
+
+.grid {
+  
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+
+/* 5 columns, percentage width */
+.grid-item{
+  margin-bottom:20px;
+  width: 30%;
+  margin: 5px;
+}
+.grid-item .inner {
+  padding:12px;
+  border:solid 1px;
+}
+.grid-item .date {
+  color:#000;
+}
+
+.grid-sizer {
+  width: 20%;
+}
+
+
+.grid-item--width2 { width: 40%; }
+.grid-item--height2 { height: 200px; }

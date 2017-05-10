@@ -1,0 +1,30 @@
+socialmediafeed.form:
+  title: Global
+  route_name: socialmediafeed.form
+  base_route: socialmediafeed.form
+  weight: 0
+socialmediafeed.facebook:
+  title: Facebook
+  route_name: socialmediafeed.facebook
+  base_route: socialmediafeed.form
+  weight: 1  
+socialmediafeed.twitter:
+  title: Twitter
+  route_name: socialmediafeed.twitter
+  base_route: socialmediafeed.form
+  weight: 2  
+socialmediafeed.instagram:
+  title: Instagram
+  route_name: socialmediafeed.instagram
+  base_route: socialmediafeed.form
+  weight: 3
+socialmediafeed.linkedin:
+  title: LinkedIn
+  route_name: socialmediafeed.linkedin
+  base_route: socialmediafeed.form
+  weight: 4
+socialmediafeed.youtube:
+  title: YouTube
+  route_name: socialmediafeed.youtube
+  base_route: socialmediafeed.form
+  weight: 5  

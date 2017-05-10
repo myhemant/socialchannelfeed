@@ -1,0 +1,13 @@
+socialmediafeed.admin_index:
+  title: Social Media Feed
+  route_name: socialmediafeed.admin_index
+  parent: system.admin_config
+  description: 'Configure Social Media Feed accounts.'
+  position: left
+  weight: -20
+socialmediafeed.form:
+  title: Social Media Feed config form
+  route_name: socialmediafeed.form
+  parent: socialmediafeed.admin_index
+  description: "Configure Social Media Feed Channels account settings, including API configuration."
+  

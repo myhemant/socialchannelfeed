@@ -1,0 +1,8 @@
+item_to_show: 20
+fb_item_to_fetch: 20
+instagram_item_to_fetch: 20
+linkedin_item_to_fetch: 20
+youtube_item_to_fetch: 20
+twitter_item_to_fetch: 20
+fb_des_trim: 300
+cache_duration: 1

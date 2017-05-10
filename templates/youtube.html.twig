@@ -1,0 +1,31 @@
+{#
+*
+*     <!-- <div class="youtube-thumbnail">
+        <a target="_blank" href="https://www.youtube.com/watch?v={{youtube.videoid}}">
+          {{ youtube.high }}
+        </a>
+      </div> -->
+#}
+{%
+  set classes = [
+  'socialhub',
+  'youtube',
+  ]
+%}
+
+<div class="col-md-4 grid-item element-item youtube">
+ <div class="youtube-item inner">
+   <div class="date">{{ youtube.publishedAt }}</div>
+   <div class="youtube-player"  data-id="{{youtube.videoid}}"></div>
+
+      <div class="youtube-title">
+        <a target="_blank" href="https://www.youtube.com/watch?v={{youtube.videoid}}">
+          {{ youtube.title }}
+        </a>
+      </div>
+      <div class="youtube-description">
+        {{ youtube.description }}
+      </div>
+    </div>
+</div>
+ 
